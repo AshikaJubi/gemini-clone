@@ -1,9 +1,11 @@
-import {API_KEY,MODEL_NAME} from './api.js';
 import {
     GoogleGenerativeAI,
     HarmCategory,
     HarmBlockThreshold,
   }from "@google/generative-ai";
+  
+  const API_KEY = import.meta.env.VITE_API_KEY;
+  const MODEL_NAME = import.meta.env.VITE_MODEL_NAME;
   
   async function runChat(prompt) {
     const genAI = new GoogleGenerativeAI(API_KEY);
